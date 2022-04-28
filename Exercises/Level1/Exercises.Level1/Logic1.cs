@@ -111,6 +111,8 @@ public class Logic1
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
+
+      
         if (speed <= 60 || speed <= 65 && isBirthday)
         {
             return 0;
@@ -180,7 +182,24 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        throw new NotImplementedException();
+        if ((a == 6) || (b ==6))
+        {
+            return true;
+        }
+           if (a+b ==6)
+        {
+            return true;
+        }
+        if (Math.Abs(a - b) == 6)
+        {
+            return true;
+        }
+        return false;
+
+
+            
+
+
     }
 
     /// <summary>
@@ -194,7 +213,9 @@ public class Logic1
     /// </summary>
     public bool In1To10(int n, bool outsideMode)
     {
+
         throw new NotImplementedException();
+
     }
 
     /// <summary>
