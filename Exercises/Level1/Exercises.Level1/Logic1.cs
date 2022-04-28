@@ -111,7 +111,18 @@ public class Logic1
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
-        throw new NotImplementedException();
+        if (speed <= 60 || speed <= 65 && isBirthday)
+        {
+            return 0;
+
+        }
+        if (speed <= 80 || speed <= 85 && isBirthday)
+        {
+            return 1;
+        }
+        return 2;
+        
+
     }
 
     /// <summary>
@@ -124,7 +135,19 @@ public class Logic1
     /// </summary>
     public int SortaSum(int a, int b)
     {
-        throw new NotImplementedException();
+        int sum = a+ b;
+        if (sum >= 10 && sum <= 19)
+        {
+            return 20;
+        }
+        else
+        {
+            return sum;
+
+        }
+            
+
+
     }
 
     /// <summary>
@@ -140,7 +163,10 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
+
         throw new NotImplementedException();
+
+
     }
 
     /// <summary>
