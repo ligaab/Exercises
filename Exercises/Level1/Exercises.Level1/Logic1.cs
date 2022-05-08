@@ -214,7 +214,18 @@ public class Logic1
     public bool In1To10(int n, bool outsideMode)
     {
 
-        throw new NotImplementedException();
+        if (outsideMode == false && n >= 1 && n <= 10)
+        {
+            return true;
+        }
+        if ((outsideMode == true) && (n <= 1 || n >= 10))
+        {
+            return true;
+        }
+        else return false;
+
+
+
 
     }
 
@@ -325,7 +336,24 @@ public class Logic1
     /// </summary>
     public int TeaParty(int tea, int candy)
     {
-        throw new NotImplementedException();
+        if (tea < 5 || candy < 5)
+        {
+            return 0;
+        }
+        if (tea >= candy *2 || candy >= tea * 2) 
+        {
+            return 2;
+
+        }
+        if (tea >=5 && candy >=5)
+        {
+            return 1;
+
+        }
+        else return 0;
+
+
+    
     }
 
     /// <summary>
@@ -339,7 +367,20 @@ public class Logic1
     /// </summary>
     public string FizzString(string str)
     {
-        throw new NotImplementedException();
+        if( str.StartsWith ("f") && str.EndsWith ("b"))
+        {
+            return "FizzBuzz";
+        }
+        if (str.StartsWith ("f"))
+        {
+            return "Fizz";
+        }
+        else if (str.EndsWith ("b"))
+        {
+            return "Buzz";
+        }
+        else return str;
+
     }
 
     /// <summary>
@@ -355,7 +396,26 @@ public class Logic1
     /// </summary>
     public string FizzString2(int n)
     {
-        throw new NotImplementedException();
+        Boolean fizz = n % 3 == 0;
+        Boolean buzz = n % 5 == 0;
+
+        if (fizz && buzz)
+        {
+            return "FizzBuzz!";
+        }
+        if (fizz)
+        {
+            return "Fizz!";
+
+        }
+        if (buzz)
+        {
+            return "Buzz!";
+        }
+        return n + "!";
+
+
+
     }
 
     /// <summary>
@@ -367,7 +427,12 @@ public class Logic1
     /// </summary>
     public bool TwoAsOne(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a + b == c || a + c == b || c + b == a)
+        {
+            return true;
+        }
+        else  return false;
+
     }
 
     /// <summary>
@@ -465,7 +530,20 @@ public class Logic1
     /// </summary>
     public int RedTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        if (a == b && b == c && c == 2 && a == c )
+        {
+            return 10;
+        }
+        if (a == b && b == c && a == c)
+        {
+            return 5;
+        }
+        if (a! == b && a! == c)
+        {
+            return 1;
+        }
+        else return 0;
+
     }
 
     /// <summary>
