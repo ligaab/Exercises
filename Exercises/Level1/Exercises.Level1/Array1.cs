@@ -19,7 +19,20 @@ public class Array1
     /// </summary>
     public bool FirstLast6(int[] nums)
     {
-        throw new NotImplementedException();
+        //1. izgustam pirmo un pedejo skaitli masiva
+        int first = nums[0];
+
+        //2. izgustam pedejo elementu
+        int last = nums[nums.Length - 1];
+
+
+        //3. atgriezam vertibu true, ja kaut viens ir vienads ar 6
+        if (last == 6 || first == 6)
+        {
+            return true;
+        }
+        return false;
+
     }
 
     /// <summary>
@@ -32,7 +45,18 @@ public class Array1
     /// </summary>
     public bool SameFirstLast(int[] nums)
     {
-        throw new NotImplementedException();
+        // ja masivs ir isaks par viens, atgriezam false
+        if (nums.Length == 0)
+        {
+            return false;
+        }
+        // izgustam pirmo un pedejo elementu
+
+        int first = nums[0];
+        int last = nums[nums.Length - 1];
+        // salidzinam vai elementi ir vienadi
+
+        return first == last;
     }
 
     /// <summary>
@@ -42,7 +66,8 @@ public class Array1
     /// </summary>
     public int[] MakePi()
     {
-        throw new NotImplementedException();
+       
+        return new int[] {3, 1,4 };
     }
 
     /// <summary>
@@ -55,7 +80,25 @@ public class Array1
     /// </summary>
     public bool CommonEnd(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        // izgustam abu masivu pirmos elementus un salidzinam
+
+        int sartA = a[0];
+        int startB = b[0];
+        if (sartA == startB)
+        {
+            return true;
+        }
+        // ja ir vienadi, atgriezam true
+        // izgustam abu masivu pedejos elemntus un salidzinam
+        int lasta = a[a.Length - 1];
+        int lastb = b[b.Length - 1];
+        if (lasta == lastb)
+        {
+            return true;
+        }
+        //ja ir vienadi atgriezam vertibu true
+        // citadi atgriezam vertibu false
+        else return false;
     }
 
     /// <summary>
@@ -80,7 +123,19 @@ public class Array1
     /// </summary>
     public int[] RotateLeft3(int[] nums)
     {
-        throw new NotImplementedException();
+        //// 1. Piedefinējam mainīgo, kurā glabāsim summas vērtību
+         int sum = 0;
+        for(int i = 0; i < nums.Length; i++)
+
+        // 2. Izmantojot ciklu ejam cauri katram masīva elementam un pieksaitam summai
+          {
+            sum += nums[i];
+        }
+
+        // 3. Atgriežam summas mainīgo
+         return sum;
+
+       
     }
 
     /// <summary>
@@ -93,7 +148,14 @@ public class Array1
     /// </summary>
     public int[] Reverse3(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] array = new int [nums.Length];
+
+        array[0] = nums[1]
+            array[1] = nums[2]
+            array[2] = nums[0]
+            return array;
+
+        
     }
 
     /// <summary>
