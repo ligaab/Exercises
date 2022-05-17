@@ -110,7 +110,19 @@ public class Array1
     /// </summary>
     public int Sum3(int[] nums)
     {
-        throw new NotImplementedException();
+
+
+        //// 1. Piedefinējam mainīgo, kurā glabāsim summas vērtību
+        int sum = 0;
+        for (int i = 0; i < nums.Length; i++)
+
+        // 2. Izmantojot ciklu ejam cauri katram masīva elementam un pieksaitam summai
+        {
+            sum += nums[i];
+        }
+
+        // 3. Atgriežam summas mainīgo
+        return sum;
     }
 
     /// <summary>
@@ -123,40 +135,31 @@ public class Array1
     /// </summary>
     public int[] RotateLeft3(int[] nums)
     {
-        //// 1. Piedefinējam mainīgo, kurā glabāsim summas vērtību
-         int sum = 0;
-        for(int i = 0; i < nums.Length; i++)
+            int[] array = new int[nums.Length];
 
-        // 2. Izmantojot ciklu ejam cauri katram masīva elementam un pieksaitam summai
-          {
-            sum += nums[i];
-        }
-
-        // 3. Atgriežam summas mainīgo
-         return sum;
-
-       
-    }
-
-    /// <summary>
-    /// Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2,
-    /// 3} yields {2, 3, 1}.
-    /// 
-    /// reverse3([1, 2, 3]) → [3, 2, 1]
-    /// reverse3([5, 11, 9]) → [9, 11, 5]
-    /// reverse3([7, 0, 0]) → [0, 0, 7]
-    /// </summary>
-    public int[] Reverse3(int[] nums)
-    {
-        int[] array = new int [nums.Length];
-
-        array[0] = nums[1]
-            array[1] = nums[2]
-            array[2] = nums[0]
+        array[0] = nums[1];
+        array[1] = nums[2];
+        array[2] = nums[0];
             return array;
 
-        
-    }
+
+        }
+
+        /// <summary>
+        /// Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2,
+        /// 3} yields {2, 3, 1}.
+        /// 
+        /// reverse3([1, 2, 3]) → [3, 2, 1]
+        /// reverse3([5, 11, 9]) → [9, 11, 5]
+        /// reverse3([7, 0, 0]) → [0, 0, 7]
+        /// </summary>
+        public int[] Reverse3(int[] nums)
+    {
+        int[] temp = { nums[2], nums[1], nums[0] };
+        return temp;
+
+
+        }
 
     /// <summary>
     /// Given an array of ints length 3, figure out which is larger, the first or last element in the
@@ -168,7 +171,16 @@ public class Array1
     /// </summary>
     public int[] MaxEnd3(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums[0] > nums[2])
+        {
+            int[] temp = { nums[0], nums[0], nums[0] };
+            return temp;
+        }
+        else
+        {
+            int[] temp = { nums[2], nums[2], nums[2] };
+            return temp;
+        }
     }
 
     /// <summary>
@@ -182,8 +194,20 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length == 0)
+        {
+            return 0;
+        }
+        else if (nums.Length <2)
+        {
+            return nums[0];
+        }
+        else
+        {
+            return nums [0] + nums [1];
+        }
     }
+
 
     /// <summary>
     /// Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their
