@@ -17,7 +17,14 @@ public class Array2
     /// </summary>
     public int CountEvens(int[] nums)
     {
-        throw new NotImplementedException();
+        int count = 0;
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] % 2 == 0)
+                count++;
+        }
+        return count;
+
     }
 
     /// <summary>
@@ -31,7 +38,17 @@ public class Array2
     /// </summary>
     public int BigDiff(int[] nums)
     {
-        throw new NotImplementedException();
+        int max = nums[0];
+        int min = nums[0];
+        for (int i = 1; i < nums.Length; i++)
+        {
+            if (nums[i] > max)
+                max = nums[i];
+            else if (nums[i] < min)
+                min = nums[i];
+        }
+        return (max - min);
+
     }
 
     /// <summary>
@@ -47,8 +64,20 @@ public class Array2
     /// </summary>
     public int CenteredAverage(int[] nums)
     {
-        throw new NotImplementedException();
+        int max = nums[0];
+        int min = nums[0];
+        int sum = nums[0];
+        for (int i = 1; i < nums.Length; i++)
+        {
+            sum += nums[i];
+            if (nums[i] > max)
+                max = nums[i];
+            else if (nums[i] < min)
+                min = nums[i];
+        }
+        return (sum - max - min) / (nums.Length - 2);
     }
+
 
     /// <summary>
     /// Return the sum of the numbers in the array, returning 0 for an empty array. Except the
